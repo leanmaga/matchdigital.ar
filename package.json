@@ -2,11 +2,14 @@
   "name": "communityro",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "communityro"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+   "dev": "npm --prefix communityro run dev",
+    "build": "npm --prefix communityro run build",
+    "start": "npm --prefix communityro run start",
+    "lint": "npm --prefix communityro run lint"
   },
   "dependencies": {
     "next": "16.2.6",
