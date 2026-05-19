@@ -6,10 +6,10 @@
     "communityro"
   ],
   "scripts": {
-   "dev": "npm --prefix communityro run dev",
-    "build": "npm --prefix communityro run build",
-    "start": "npm --prefix communityro run start",
-    "lint": "npm --prefix communityro run lint"
+   "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
     "next": "16.2.6",
