@@ -10,16 +10,7 @@ export default function ContactSection() {
             <p className="label inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.35em] text-white/70">Contacto</p>
             <h2 className="text-4xl font-semibold tracking-[-0.03em] text-white sm:text-5xl">Listos para crear el siguiente <span className="text-accent">capítulo</span> de tu marca.</h2>
             <p className="text-base leading-8 text-white/70 sm:text-lg">Escribinos y te armamos una propuesta con estilo, estrategia y diseño pensado para tu público ideal.</p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[2rem] border border-white/10 bg-black/60 p-6 text-white/80">
-                <p className="text-sm uppercase tracking-[0.3em] text-white/50">Tiempo de entrega</p>
-                <p className="mt-3 text-2xl font-semibold text-white">2-3 semanas</p>
-              </div>
-              <div className="rounded-[2rem] border border-white/10 bg-black/60 p-6 text-white/80">
-                <p className="text-sm uppercase tracking-[0.3em] text-white/50">Formatos</p>
-                <p className="mt-3 text-2xl font-semibold text-white">Web, IG, Branding</p>
-              </div>
-            </div>
+           
             <div className="mt-6 flex gap-4">
               <a href="https://www.linkedin.com/in/rocio-abbadessa/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-white/90 hover:bg-white/5">
                 <Image src="/linkedinblack.svg" alt="LinkedIn" width={20} height={20} className="h-5 w-5" />

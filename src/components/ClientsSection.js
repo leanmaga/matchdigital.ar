@@ -20,7 +20,7 @@ export default function ClientsSection() {
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300/90">Testimonial</p>
             <blockquote className="rounded-[2rem] border border-white/10 bg-black/60 p-8 text-white/75 shadow-[0_30px_70px_rgba(0,0,0,0.2)]">
-              “Match Digital elevó nuestra comunicación visual al siguiente nivel. La ejecución fue impecable, el resultado elegante y con una vibra moderna que nos representa.”
+              “MatchDigital.Ar elevó nuestra comunicación visual al siguiente nivel. La ejecución fue impecable, el resultado elegante y con una vibra moderna que nos representa.”
             </blockquote>
           </div>
         </div>

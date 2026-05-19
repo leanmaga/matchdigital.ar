@@ -18,8 +18,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Match Digital · Branding y diseño elegante",
-  description: "Landing page para Match Digital con paleta negro, lila y blanco, estilo premium y movimiento visual.",
+  title: "MatchDigital.Ar · Branding y diseño elegante",
+  description: "Landing page para MatchDigital.Ar con paleta negro, lila y blanco, estilo premium y movimiento visual.",
 };
 
 export default function RootLayout({ children }) {

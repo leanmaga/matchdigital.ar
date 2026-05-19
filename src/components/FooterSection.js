@@ -5,7 +5,7 @@ export default function FooterSection() {
     <footer className="footer border-t border-white/10 px-6 py-10 text-white/60 sm:px-10 lg:px-16">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.35em] text-white/50">Match Digital</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-white/50">MatchDigital.Ar</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-white/60">Diseño y branding digital para emprendedoras y marcas con estilo. Elegancia, movimiento y comunicación de alto nivel.</p>
         </div>
         <div className="flex flex-wrap gap-4 items-center text-sm">

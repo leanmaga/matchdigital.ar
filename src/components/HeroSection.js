@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import InstagramProfile from "./InstagramProfile";
 
 const COLORS = [
   "rgba(192,80,255,",
@@ -211,7 +212,7 @@ export default function HeroSection() {
           {/* ── Contenido textual ── */}
           <div className="order-2 lg:order-1 flex flex-col gap-6 flex-1 min-w-0 py-16 lg:py-0">
             <span className="label inline-flex w-fit items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.35em] text-white/70 backdrop-blur-sm">
-              Match Digital
+              MatchDigital.Ar
             </span>
 
             <div className="relative">
@@ -248,7 +249,7 @@ export default function HeroSection() {
         </div>
 
         {/* ── Cards inferiores ── */}
-        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end pb-16 lg:pb-0">
+        {/* <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end pb-16 lg:pb-0">
           <div className="flex flex-col gap-5 rounded-[2rem] border border-white/10 bg-black/40 p-8 shadow-[0_40px_120px_rgba(86,0,255,0.15)] backdrop-blur-xl">
             <p className="text-sm uppercase tracking-[0.3em] text-white/50">Agencia boutique</p>
             <h2 className="text-3xl font-semibold text-white">Match entre creatividad y estrategia</h2>
@@ -274,7 +275,9 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
+
+        <InstagramProfile/>
       </div>
     </section>
   );
