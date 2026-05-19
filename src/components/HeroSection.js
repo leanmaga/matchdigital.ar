@@ -115,22 +115,6 @@ const PARTICLES = [
   { top: "70%", left: "50%", size: 2, opacity: 0.6, color: "#ff00aa" },
 ];
 
-/* Watermark reutilizable — recibe el fontSize como prop */
-function BrandWatermark({ fontSize, opacity = "0.10" }) {
-  const style = { fontSize, lineHeight: 0.88 };
-  const cls = `pointer-events-none select-none font-black uppercase tracking-[-0.04em]`;
-  const color = `rgba(255,255,255,${opacity})`;
-  return (
-    <div
-      className="pointer-events-none select-none absolute inset-0 flex flex-col items-center justify-center leading-none"
-      style={{ zIndex: 1 }}
-    >
-      <span className={cls} style={{ ...style, color }}> MATCH </span>
-      <span className={cls} style={{ ...style, color }}> DIGITAL </span>
-    </div>
-  );
-}
-
 export default function HeroSection() {
   return (
     <section className="hero relative isolate overflow-hidden px-6 py-0 lg:py-24 sm:px-10 lg:px-16">
@@ -147,24 +131,58 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-6">
 
           {/* ── Watermark + imagen ── */}
-          <div
-            className="order-1 lg:order-2 w-full lg:w-[44%] lg:flex-shrink-0 h-screen lg:h-auto flex items-center justify-center relative "
-          >
+          <div className="order-1 lg:order-2 w-full lg:w-[44%] lg:flex-shrink-0 h-screen lg:h-auto flex items-center justify-center relative">
+
             {/*
-              MOBILE: texto muy grande (~42vw), sin cap máximo ajustado
-              — en 390px → 42vw ≈ 163px por línea, las letras se salen
-                del borde y dan efecto de poster, igual al mockup
+              MOBILE — letras muy altas y angostas
+              ─────────────────────────────────────
+              fontSize grande (70vw) = letras muy altas
+              scaleX(0.38)          = comprime el ancho al 38%
+              Resultado: cada línea queda ~270px alto × ~150px ancho
+              → el bloque total (2 líneas) es MÁS ALTO que ancho ✓
+              overflow-hidden del <section> corta lo que se sale
             */}
             <div className="block lg:hidden">
-              <BrandWatermark fontSize="clamp(5rem, 10vw, 9rem)" opacity="0.12" className="mb-4" />
+              <div
+                className="pointer-events-none select-none absolute inset-0 flex flex-col items-center justify-center leading-none overflow-hidden"
+                style={{ zIndex: 1 }}
+              >
+                <span
+                  className="font-black uppercase text-white/[0.14] tracking-[-0.02em] block"
+                  style={{ fontSize: "70vw", lineHeight: 0.88, transform: "scaleX(0.28)", transformOrigin: "center" }}
+                >
+                  MATCH
+                </span>
+                <span
+                  className="font-black uppercase text-white/[0.14] tracking-[-0.02em] block"
+                  style={{ fontSize: "70vw", lineHeight: 0.88, transform: "scaleX(0.28)", transformOrigin: "center" }}
+                >
+                  DIGITAL
+                </span>
+              </div>
             </div>
 
             {/*
-              DESKTOP: tamaño relativo al contenedor (44% del viewport)
-              — en 1440px → 10vw ≈ 144px, proporcionado con la columna
+              DESKTOP — tamaño relativo a la columna (sin scaleX)
             */}
             <div className="hidden lg:block">
-              <BrandWatermark fontSize="clamp(5rem, 10vw, 9rem)" opacity="0.07"className="mt-4" />
+              <div
+                className="pointer-events-none select-none absolute inset-0 flex flex-col items-center justify-center leading-none"
+                style={{ zIndex: 1 }}
+              >
+                <span
+                  className="font-black uppercase text-white/[0.07] tracking-[-0.04em] block"
+                  style={{ fontSize: "clamp(5rem, 10vw, 9rem)", lineHeight: 0.88 }}
+                >
+                  MATCH
+                </span>
+                <span
+                  className="font-black uppercase text-white/[0.07] tracking-[-0.04em] block"
+                  style={{ fontSize: "clamp(5rem, 10vw, 9rem)", lineHeight: 0.88 }}
+                >
+                  DIGITAL
+                </span>
+              </div>
             </div>
 
             {/* Imagen */}
@@ -192,7 +210,6 @@ export default function HeroSection() {
 
           {/* ── Contenido textual ── */}
           <div className="order-2 lg:order-1 flex flex-col gap-6 flex-1 min-w-0 py-16 lg:py-0">
-
             <span className="label inline-flex w-fit items-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.35em] text-white/70 backdrop-blur-sm">
               Match Digital
             </span>
@@ -201,34 +218,21 @@ export default function HeroSection() {
               <div
                 className="pointer-events-none absolute"
                 style={{
-                  left: "10%",
-                  top: "30%",
-                  width: "420px",
-                  height: "320px",
+                  left: "10%", top: "30%", width: "420px", height: "320px",
                   transform: "translate(-20%, -40%)",
-                  background:
-                    "radial-gradient(ellipse at center, rgba(255,20,180,0.55) 0%, rgba(200,40,255,0.35) 30%, rgba(140,0,200,0.15) 55%, transparent 70%)",
-                  filter: "blur(18px)",
-                  zIndex: -1,
+                  background: "radial-gradient(ellipse at center, rgba(255,20,180,0.55) 0%, rgba(200,40,255,0.35) 30%, rgba(140,0,200,0.15) 55%, transparent 70%)",
+                  filter: "blur(18px)", zIndex: -1,
                 }}
               />
               {PARTICLES.map((p, i) => (
-                <span
-                  key={i}
-                  className="pointer-events-none absolute rounded-full"
+                <span key={i} className="pointer-events-none absolute rounded-full"
                   style={{
-                    top: p.top,
-                    left: p.left,
-                    width: p.size,
-                    height: p.size,
-                    background: p.color,
-                    opacity: p.opacity,
-                    boxShadow: `0 0 ${p.size * 3}px ${p.color}`,
-                    zIndex: -1,
+                    top: p.top, left: p.left, width: p.size, height: p.size,
+                    background: p.color, opacity: p.opacity,
+                    boxShadow: `0 0 ${p.size * 3}px ${p.color}`, zIndex: -1,
                   }}
                 />
               ))}
-
               <h1 className="hero-title text-5xl font-black uppercase leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
                 Branding <span className="text-accent">digital</span>
                 <br /> que <span className="text-accent">impacta</span> con estilo.
@@ -254,7 +258,6 @@ export default function HeroSection() {
               sofisticación y estilo contemporáneo.
             </p>
           </div>
-
           <div className="grid gap-4">
             <div className="feature-card rounded-[1.75rem] border border-white/10 bg-black/60 p-6 shadow-[0_24px_80px_rgba(114,74,255,0.16)] backdrop-blur-md">
               <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300/90">Estrategia</p>
