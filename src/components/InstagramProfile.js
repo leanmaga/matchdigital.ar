@@ -21,10 +21,7 @@ export default function InstagramProfile(){
             <div className="text-2xl font-bold">1.8k</div>
             <div className="text-white/60">seguidores</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold">3.0k</div>
-            <div className="text-white/60">seguidos</div>
-          </div>
+         
         </div>
 
         <div className="hidden sm:block text-sm text-white/70">
