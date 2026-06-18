@@ -93,7 +93,10 @@ function LaserGrid() {
     init();
     draw();
 
-    window.addEventListener("resize", () => { resize(); init(); });
+    window.addEventListener("resize", () => {
+      resize();
+      init();
+    });
     return () => cancelAnimationFrame(animId);
   }, []);
 
@@ -124,25 +127,22 @@ export default function HeroSection() {
 
       <LaserGrid />
 
-      <div className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 -translate-y-1/2 rounded-full bg-fuchsia-600/20 blur-[100px]" style={{ zIndex: 1 }} />
-      <div className="pointer-events-none absolute -left-20 top-10 h-60 w-60 rounded-full bg-purple-700/20 blur-[80px]" style={{ zIndex: 1 }} />
+      <div
+        className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 -translate-y-1/2 rounded-full bg-fuchsia-600/20 blur-[100px]"
+        style={{ zIndex: 1 }}
+      />
+      <div
+        className="pointer-events-none absolute -left-20 top-10 h-60 w-60 rounded-full bg-purple-700/20 blur-[80px]"
+        style={{ zIndex: 1 }}
+      />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-14" style={{ zIndex: 2 }}>
-
+      <div
+        className="relative mx-auto flex max-w-7xl flex-col gap-14"
+        style={{ zIndex: 2 }}
+      >
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-6">
-
           {/* ── Watermark + imagen ── */}
           <div className="order-1 lg:order-2 w-full lg:w-[44%] lg:flex-shrink-0 h-screen lg:h-auto flex items-center justify-center relative">
-
-            {/*
-              MOBILE — letras muy altas y angostas
-              ─────────────────────────────────────
-              fontSize grande (70vw) = letras muy altas
-              scaleX(0.38)          = comprime el ancho al 38%
-              Resultado: cada línea queda ~270px alto × ~150px ancho
-              → el bloque total (2 líneas) es MÁS ALTO que ancho ✓
-              overflow-hidden del <section> corta lo que se sale
-            */}
             <div className="block lg:hidden">
               <div
                 className="pointer-events-none select-none absolute inset-0 flex flex-col items-center justify-center leading-none overflow-hidden"
@@ -150,22 +150,29 @@ export default function HeroSection() {
               >
                 <span
                   className="font-black uppercase text-white/[0.14] tracking-[-0.02em] block"
-                  style={{ fontSize: "70vw", lineHeight: 0.88, transform: "scaleX(0.28)", transformOrigin: "center" }}
+                  style={{
+                    fontSize: "70vw",
+                    lineHeight: 0.88,
+                    transform: "scaleX(0.28)",
+                    transformOrigin: "center",
+                  }}
                 >
                   MATCH
                 </span>
                 <span
                   className="font-black uppercase text-white/[0.14] tracking-[-0.02em] block"
-                  style={{ fontSize: "70vw", lineHeight: 0.88, transform: "scaleX(0.28)", transformOrigin: "center" }}
+                  style={{
+                    fontSize: "70vw",
+                    lineHeight: 0.88,
+                    transform: "scaleX(0.28)",
+                    transformOrigin: "center",
+                  }}
                 >
                   DIGITAL
                 </span>
               </div>
             </div>
 
-            {/*
-              DESKTOP — tamaño relativo a la columna (sin scaleX)
-            */}
             <div className="hidden lg:block">
               <div
                 className="pointer-events-none select-none absolute inset-0 flex flex-col items-center justify-center leading-none"
@@ -173,13 +180,19 @@ export default function HeroSection() {
               >
                 <span
                   className="font-black uppercase text-white/[0.07] tracking-[-0.04em] block"
-                  style={{ fontSize: "clamp(5rem, 10vw, 9rem)", lineHeight: 0.88 }}
+                  style={{
+                    fontSize: "clamp(5rem, 10vw, 9rem)",
+                    lineHeight: 0.88,
+                  }}
                 >
                   MATCH
                 </span>
                 <span
                   className="font-black uppercase text-white/[0.07] tracking-[-0.04em] block"
-                  style={{ fontSize: "clamp(5rem, 10vw, 9rem)", lineHeight: 0.88 }}
+                  style={{
+                    fontSize: "clamp(5rem, 10vw, 9rem)",
+                    lineHeight: 0.88,
+                  }}
                 >
                   DIGITAL
                 </span>
@@ -187,19 +200,22 @@ export default function HeroSection() {
             </div>
 
             {/* Imagen */}
-            <div className="relative h-56 w-56 sm:h-64 sm:w-64 xl:h-72 xl:w-72" style={{ zIndex: 2 }}>
+            <div
+              className="relative h-56 w-56 sm:h-64 sm:w-64 xl:h-72 xl:w-72"
+              style={{ zIndex: 2 }}
+            >
               <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_center,rgba(192,80,255,0.5),rgba(124,0,237,0.2),transparent_65%)] blur-2xl" />
               <div className="relative h-full w-full overflow-hidden rounded-full border border-purple-400/30 bg-slate-950/40 shadow-[0_0_60px_rgba(192,80,255,0.45),0_0_120px_rgba(192,80,255,0.2)]">
                 <Image
-                  src="/ro.png"
-                  alt="Rocio Abbadessa"
+                  src="/profile.jpg"
+                  alt="Rocío Abbadessa"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 flex flex-col items-center pb-5 text-center">
                   <span className="text-sm font-semibold leading-tight text-white drop-shadow-md">
-                    Rocio Abbadessa
+                    Rocío Abbadessa
                   </span>
                   <span className="text-[11px] text-white/70 drop-shadow-md">
                     Community Manager
@@ -219,65 +235,50 @@ export default function HeroSection() {
               <div
                 className="pointer-events-none absolute"
                 style={{
-                  left: "10%", top: "30%", width: "420px", height: "320px",
+                  left: "10%",
+                  top: "30%",
+                  width: "420px",
+                  height: "320px",
                   transform: "translate(-20%, -40%)",
-                  background: "radial-gradient(ellipse at center, rgba(255,20,180,0.55) 0%, rgba(200,40,255,0.35) 30%, rgba(140,0,200,0.15) 55%, transparent 70%)",
-                  filter: "blur(18px)", zIndex: -1,
+                  background:
+                    "radial-gradient(ellipse at center, rgba(255,20,180,0.55) 0%, rgba(200,40,255,0.35) 30%, rgba(140,0,200,0.15) 55%, transparent 70%)",
+                  filter: "blur(18px)",
+                  zIndex: -1,
                 }}
               />
               {PARTICLES.map((p, i) => (
-                <span key={i} className="pointer-events-none absolute rounded-full"
+                <span
+                  key={i}
+                  className="pointer-events-none absolute rounded-full"
                   style={{
-                    top: p.top, left: p.left, width: p.size, height: p.size,
-                    background: p.color, opacity: p.opacity,
-                    boxShadow: `0 0 ${p.size * 3}px ${p.color}`, zIndex: -1,
+                    top: p.top,
+                    left: p.left,
+                    width: p.size,
+                    height: p.size,
+                    background: p.color,
+                    opacity: p.opacity,
+                    boxShadow: `0 0 ${p.size * 3}px ${p.color}`,
+                    zIndex: -1,
                   }}
                 />
               ))}
               <h1 className="hero-title text-5xl font-black uppercase leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl lg:text-7xl">
-                Branding <span className="text-accent">digital</span>
-                <br /> que <span className="text-accent">impacta</span> con estilo.
+                Potenciamos tu marca en{" "}
+                <span className="text-accent">redes</span> con estrategia,
+                contenido y publicidad digital.
               </h1>
             </div>
 
             <p className="max-w-2xl text-lg leading-8 text-white/70 sm:text-xl">
-              Diseñamos experiencias visuales únicas para marcas que quieren
-              destacarse con elegancia, movimiento y una identidad potente en
-              cada punto de contacto.
+              En Match Digital ayudamos a emprendedores, profesionales y marcas
+              a comunicar mejor, vender más y construir una presencia digital
+              sólida en Instagram, Facebook, TikTok, LinkedIn, web y campañas
+              publicitarias.
             </p>
           </div>
         </div>
 
-        {/* ── Cards inferiores ── */}
-        {/* <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end pb-16 lg:pb-0">
-          <div className="flex flex-col gap-5 rounded-[2rem] border border-white/10 bg-black/40 p-8 shadow-[0_40px_120px_rgba(86,0,255,0.15)] backdrop-blur-xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-white/50">Agencia boutique</p>
-            <h2 className="text-3xl font-semibold text-white">Match entre creatividad y estrategia</h2>
-            <p className="text-base leading-7 text-white/70">
-              Tu identidad digital crece con un diseño pensado para redes, web y
-              presentaciones de alto impacto. Cada detalle comunica confianza,
-              sofisticación y estilo contemporáneo.
-            </p>
-          </div>
-          <div className="grid gap-4">
-            <div className="feature-card rounded-[1.75rem] border border-white/10 bg-black/60 p-6 shadow-[0_24px_80px_rgba(114,74,255,0.16)] backdrop-blur-md">
-              <p className="text-sm uppercase tracking-[0.3em] text-fuchsia-300/90">Estrategia</p>
-              <p className="mt-4 text-white/80">
-                Posicionamiento visual con mensajes claros, memorables y listos
-                para generar conexión en Instagram, web y email.
-              </p>
-            </div>
-            <div className="feature-card rounded-[1.75rem] border border-white/10 bg-black/60 p-6 shadow-[0_24px_80px_rgba(114,74,255,0.08)] backdrop-blur-md">
-              <p className="text-sm uppercase tracking-[0.3em] text-purple-300/90">Diseño</p>
-              <p className="mt-4 text-white/80">
-                Composiciones modernas, tipografía fuerte y manipulaciones
-                visuales que resaltan el lujo accesible de tu marca.
-              </p>
-            </div>
-          </div>
-        </div> */}
-
-        <InstagramProfile/>
+        <InstagramProfile />
       </div>
     </section>
   );
