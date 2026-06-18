@@ -5,7 +5,7 @@ export default function InstagramProfile() {
     <section className="instagram-profile mx-auto max-w-7xl px-6 py-10 sm:px-10 lg:px-16">
       <div className="instagram-card rounded-[1.5rem] border border-white/10 bg-black/60 p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
-          <div className="avatar-lg flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-400 text-black font-bold text-xl">
+          <div className="avatar-lg flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-400 text-black font-bold text-xl">
             R
           </div>
           <div>
