@@ -31,6 +31,17 @@ export default function AboutSection() {
               acompañamiento cercano para que cada marca comunique con claridad,
               constancia y personalidad.
             </p>
+            <p className="max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
+              ¿Querés saber más sobre mí?{" "}
+              <a
+                href="https://www.instagram.com/rocioabba.ok/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="max-w-2xl text-base leading-8  sm:text-lg text-fuchsia-300/80 hover:text-fuchsia-300 transition"
+              >
+                Seguime en @rocioabba.ok
+              </a>
+            </p>
           </div>
         </div>
       </div>
