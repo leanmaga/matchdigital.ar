@@ -1,8 +1,8 @@
 export default function WorkSection() {
   const videos = [
-    { src: "/video1.mp4" },
-    { src: "/video2.mp4" },
-    { src: "/video3.mp4" },
+    { src: "/video1.mp4", url: "https://www.instagram.com/p/DY2v5v1vbFt/" },
+    { src: "/video2.mp4", url: "https://www.instagram.com/p/DZDv4asBka2/" },
+    { src: "/video3.mp4", url: "https://www.instagram.com/p/DYiXNoYRX8k/" },
   ];
 
   return (
@@ -19,15 +19,18 @@ export default function WorkSection() {
           </h2>
           <p className="text-base leading-8 text-white/70 sm:text-lg">
             Casos pensados para captar atención, seducir audiencias y proyectar
-            una identidad.
+            una identidad premium.
           </p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((v, i) => (
-            <div
+            <a
               key={i}
-              className="overflow-hidden rounded-[2rem] border border-white/10 bg-black/60 shadow-[0_30px_80px_rgba(0,0,0,0.25)]"
+              href={v.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-[2rem] border border-white/10 bg-black/60 shadow-[0_30px_80px_rgba(0,0,0,0.25)] transition hover:border-fuchsia-500/40"
             >
               <video
                 src={v.src}
@@ -35,10 +38,10 @@ export default function WorkSection() {
                 muted
                 loop
                 playsInline
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover transition group-hover:scale-[1.02]"
                 style={{ aspectRatio: "9/16" }}
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>
