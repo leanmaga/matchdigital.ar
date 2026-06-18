@@ -19,7 +19,7 @@ export default function WorkSection() {
           </h2>
           <p className="text-base leading-8 text-white/70 sm:text-lg">
             Casos pensados para captar atención, seducir audiencias y proyectar
-            una identidad premium.
+            una identidad.
           </p>
         </div>
 

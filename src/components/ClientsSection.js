@@ -42,8 +42,8 @@ export default function ClientsSection() {
             Confían en nuestro trabajo.
           </h2>
           <p className="text-base leading-8 text-white/70 sm:text-lg">
-            Marcas y emprendimientos que eligieron crecer con estrategia,
-            contenido y presencia digital profesional.
+            Algunas de las marcas y emprendimientos que eligieron crecer con
+            estrategia, contenido y presencia digital profesional.
           </p>
         </div>
       </div>
