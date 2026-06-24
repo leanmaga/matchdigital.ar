@@ -121,7 +121,10 @@ const PARTICLES = [
 
 export default function HeroSection() {
   return (
-    <section className="hero relative isolate overflow-hidden px-6 py-0 lg:py-24 sm:px-10 lg:px-16">
+    <section
+      id="hero"
+      className="hero relative isolate overflow-hidden px-6 py-0 lg:py-24 sm:px-10 lg:px-16"
+    >
       <div className="absolute inset-0 -z-10 bg-[#0a0010]" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(120,20,180,0.55),transparent_70%)]" />
 

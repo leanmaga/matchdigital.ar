@@ -15,7 +15,10 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="contact relative overflow-hidden bg-[linear-gradient(180deg,#050105_0%,#0b0714_100%)] px-6 py-24 sm:px-10 lg:px-16">
+    <section
+      id="contact"
+      className="contact relative overflow-hidden bg-[linear-gradient(180deg,#050105_0%,#0b0714_100%)] px-6 py-24 sm:px-10 lg:px-16"
+    >
       <div className="absolute inset-x-0 top-0 -z-10 h-52 bg-[radial-gradient(circle_at_top,_rgba(192,132,252,0.16),_transparent_40%)]" />
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">

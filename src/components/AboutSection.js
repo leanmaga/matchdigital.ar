@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="about px-6 py-24 sm:px-10 lg:px-16">
+    <section id="about" className="about px-6 py-24 sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="relative">
           {/* Círculos decorativos animados */}

@@ -6,7 +6,10 @@ export default function WorkSection() {
   ];
 
   return (
-    <section className="work relative overflow-hidden bg-[linear-gradient(180deg,#08070c_0%,#0f0816_100%)] px-6 py-24 sm:px-10 lg:px-16">
+    <section
+      id="work"
+      className="work relative overflow-hidden bg-[linear-gradient(180deg,#08070c_0%,#0f0816_100%)] px-6 py-24 sm:px-10 lg:px-16"
+    >
       <div className="absolute inset-x-0 top-0 -z-10 h-80 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_40%)]" />
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-3xl space-y-4">

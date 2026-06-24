@@ -23,7 +23,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="services px-6 py-24 sm:px-10 lg:px-16">
+    <section id="services" className="services px-6 py-24 sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-3xl space-y-4">
           <p className="label inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm uppercase tracking-[0.35em] text-white/70">

@@ -31,7 +31,11 @@ const track = [...clients, ...clients, ...clients];
 
 export default function ClientsSection() {
   return (
-    <section className="clients py-24" style={{ position: "relative" }}>
+    <section
+      id="clients"
+      className="clients py-24"
+      style={{ position: "relative" }}
+    >
       {/* Header con padding */}
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
         <div className="mb-12 max-w-3xl space-y-4">
