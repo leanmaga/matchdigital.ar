@@ -64,7 +64,7 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10 lg:px-16">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
           {/* ── Logo ── */}
           <button
             onClick={() => scrollTo("#hero")}
@@ -74,14 +74,14 @@ export default function Navbar() {
             <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-fuchsia-500 to-violet-600 text-[10px] font-black text-white shadow-[0_0_12px_rgba(192,80,252,0.5)]">
               M
             </span>
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-white/90 group-hover:text-white transition-colors">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/90 group-hover:text-white transition-colors">
               Match<span className="text-fuchsia-400">Digital</span>
             </span>
           </button>
 
           {/* ── Desktop links ── */}
           <nav
-            className="hidden items-center gap-1 lg:flex"
+            className="hidden items-center gap-0.5 lg:flex"
             aria-label="Navegación principal"
           >
             {NAV_LINKS.map((link) => {
@@ -90,7 +90,7 @@ export default function Navbar() {
                 <button
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
-                  className={`relative rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.18em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-500/60 ${
+                  className={`relative whitespace-nowrap rounded-full px-3 py-1.5 text-[11px] uppercase tracking-[0.12em] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-500/60 ${
                     isActive
                       ? "text-white"
                       : "text-white/50 hover:text-white/90"
