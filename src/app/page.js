@@ -44,7 +44,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 -m-8 rounded-full bg-emerald-500/45 blur-[54px] animate-pulse" />
         <div className="pointer-events-none absolute inset-0 -m-5 rounded-full bg-violet-600/25 blur-[34px] [animation-delay:0.6s]" />
         <a
-          href="https://api.whatsapp.com/send?phone=541158465329"
+          href="https://api.whatsapp.com/send?phone=541158465329&text=Hola%20Match%20Digital%2C%20quiero%20consultar%20un%20proyecto"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Contactar por WhatsApp"

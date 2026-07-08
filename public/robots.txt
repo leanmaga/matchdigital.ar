@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matchdigital.vercel.app/sitemap.xml
