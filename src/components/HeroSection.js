@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import InstagramProfile from "./InstagramProfile";
+import InstagramProfileImage from "./InstagramProfileImage";
 
 const COLORS = [
   "rgba(192,80,255,",
@@ -281,7 +281,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <InstagramProfile />
+        <InstagramProfileImage />
       </div>
     </section>
   );

@@ -8,22 +8,46 @@ const clients = [
     img: "/cliente1.jpg",
   },
   {
-    name: "Jolie Buenos Aires",
-    handle: "@joliebuenosaires",
-    url: "https://www.instagram.com/joliebuenosaires/",
-    img: "/cliente2.jpg",
-  },
-  {
-    name: "Deportivo Luro FC",
-    handle: "@deportivolurofc",
-    url: "https://www.instagram.com/deportivolurofc/",
-    img: "/cliente3.jpg",
-  },
-  {
     name: "DAS CAR Automóviles",
     handle: "@dascar.automoviles",
     url: "https://www.instagram.com/dascar.automoviles/",
     img: "/cliente4.jpg",
+  },
+  {
+    name: "Avant Motos",
+    handle: "@avantmotos_oficial",
+    url: "https://www.instagram.com/avantmotos_oficial",
+    img: "/cliente2.jpg",
+  },
+  {
+    name: "Laboratorio Esarte",
+    handle: "@laboratorioesarte",
+    url: "https://www.instagram.com/laboratorioesarte",
+    img: "/cliente3.jpg",
+  },
+  {
+    name: "Marcelo Mazza - Remax",
+    handle: "@mnmazza",
+    url: "https://www.instagram.com/mnmazza",
+    img: "/cliente5.jpg",
+  },
+  {
+    name: "Dr. Juan Manuel Manzini Panario",
+    handle: "@abogadomanzini",
+    url: "https://www.instagram.com/abogadomanzini",
+    img: "/cliente6.jpg",
+  },
+  {
+    name: "Todo Pasa",
+    handle: "@somos.todopasa",
+    url: "https://www.instagram.com/somos.todopasa",
+    img: "/cliente7.jpg",
+  },
+  {
+    name: "Casa Santa Rosa",
+    handle: "@casa.santa.rosa",
+    url: "https://www.instagram.com/casa.santa.rosa",
+    img: "/cliente8.jpg",
   },
 ];
 
