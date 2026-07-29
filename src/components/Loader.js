@@ -97,7 +97,7 @@ export default function Loader() {
             style={{ animationDuration: "0.9s" }}
           />
           <span className="text-lg font-black uppercase tracking-tight text-white">
-            M
+            MD
           </span>
         </div>
 
